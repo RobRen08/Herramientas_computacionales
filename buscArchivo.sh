@@ -1,8 +1,7 @@
 #!/bin/bash
 
-palabra="home"
-carpeta="Herramientas Computacionales"
+palabra=${1:?Uso: $0 <palabra> [carpeta]}
+carpeta=${2:-.}
 
-grep -iRl "$palabra" "$carpeta"
-
+echo "La ruta es : $(grep -iRl "$palabra" "$carpeta")"
 
